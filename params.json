@@ -1,6 +1,0 @@
-{
-  "name": "Indicator Reactions",
-  "tagline": "Simple indicator with Reactions ¯ \\ _ (ツ) _/¯  ",
-  "body": "# Indicator-Reactions\r\nSimple indicator with Reactions ¯ \\ _ (ツ) _/¯  \r\n![Preview](http://i.imgur.com/73qKqap.png)\r\n\r\n## Requires\r\n- Unity desktop\r\n- Python 2.7\r\n- Gkt 2.0\r\n- Pynotify\r\n- Appindicator\r\n\r\n## Pages\r\nProject [WebSite](https://TiagoDanin.github.io/Indicator-Reactions)\r\n\r\nSuggestions and Support [New Issue](https://github.com/TiagoDanin/Indicator-Reactions/issues/new)\r\n\r\n## LICENSE\r\nGNU GENERAL PUBLIC LICENSE V3 [GPLv3](https://github.com/TiagoDanin/Indicator-Reactions/blob/master/LICENSE)\r\n\r\n---\r\n>Copyright (c) 2016 Tiago Danin",
-  "note": "Don't delete this file! It's used internally to help with page regeneration."
-}
