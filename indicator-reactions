@@ -6,12 +6,17 @@ import pynotify
 import appindicator
 
 __author__ = "TiagoDanin"
-__contact__ = "tiagojdanin@outlook.com"
+__contact__ = "TiagoDanin@outlook.com"
 __copyright__ = "(c) 2016 TiagoDanin"
 __license__ = "GPLv3" #View in https://github.com/TiagoDanin/Indicator-Reactions/blob/master/LICENSE
+__version__ = "0.2"
 
 class main_indicator:
 	def __init__(self):
+		'''
+		Main
+		Menu
+		'''
 		self.ind = appindicator.Indicator ("Indicator-Reactions",
 											"Indicator-Reactions",
 											appindicator.CATEGORY_APPLICATION_STATUS)
@@ -34,12 +39,16 @@ class main_indicator:
 		self.ind.set_menu(self.menu)
 
 	def menu_list(self):
+		'''
+		List of Reactions!
+		'''
 		table = {}
 		table['( ﾟヮﾟ)'] = "( ﾟヮﾟ)"
 		table['(⌐■_■)'] = " (⌐■_■)"
 		table['¯\_(ツ)_/¯'] = "¯\_(ツ)_/¯"
 		table['( ͡° ͜ʖ ͡°)'] = "( ͡° ͜ʖ ͡°)"
 		table['つ ◕_◕ ༽つ'] = "つ ◕_◕ ༽つ"
+		table['SHOTS FIRED'] = "SHOTS FIRED"
 		table['┌（┌ ＾o＾）┐'] = "┌（┌ ＾o＾）┐"
 		table['┬──┬◡ﾉ(° -°ﾉ)'] = "┬──┬◡ﾉ(° -°ﾉ)"
 		table['(╯°□°）╯︵ ┻━┻'] = "(╯°□°）╯︵ ┻━┻"
@@ -50,12 +59,18 @@ class main_indicator:
 			self.v.show()
 
 	def clip(self, _, data):
+		'''
+		Clipboard :D
+		'''
 		clipboard = gtk.clipboard_get()
 		clipboard.set_text(str(data))
 		clipboard.store()
 		self.notif()
 
 	def notif(self):
+		'''
+		Notification with pynotify
+		'''
 		pynotify.init(">-<")
 		self.tit = 'Copied!'
 		self.body = 'Copied to Clipboard (Use Ctrl + V)'
@@ -63,9 +78,12 @@ class main_indicator:
 		new_notif.show()
 
 	def about_view(self, _):
+		'''
+		About
+		'''
 		about_ = gtk.AboutDialog()
 		about_ .set_name("Indicator-Reactions")
-		about_ .set_version("0.1")
+		about_ .set_version("0.2")
 		about_ .set_comments("Simple indicator with Reactions ¯ \ _ (ツ) _/¯")
 		about_ .set_website("https://TiagoDanin.github.io/Indicator-Reactions")
 		about_ .set_website_label("Website")
@@ -78,6 +96,9 @@ class main_indicator:
 		exit(0)
 
 def main():
+	'''
+	Start...
+	'''
 	main_indicator()
 	gtk.main()
 	exit(0)
